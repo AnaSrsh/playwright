@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "This is my repository that I created to learn how to use Playwright.",
   "main": "index.js",
-  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.43.1",
     "@types/node": "^20.12.7"
+  },
+  "scripts": {
+    "pretest": "tsc --incremental -p tests/tsconfig.json",
+    "test": "playwright test -c build"
+  },
   "dependencies": {
     "typescript": "^5.4.5"
   }
