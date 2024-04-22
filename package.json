@@ -12,7 +12,7 @@
   },
   "scripts": {
     "pretest": "tsc --incremental -p tests/tsconfig.json",
-    "test": "playwright test -c build"
+    "test": "playwright test -c build --reporter html --browser all && npx playwright show-report"
   },
   "dependencies": {
     "typescript": "^5.4.5"
